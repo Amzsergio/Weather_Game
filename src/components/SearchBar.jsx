@@ -10,7 +10,7 @@ export function SearchBar(props){
     })
 
     const [city, setCity] = useState({})
-    console.log(city)
+    
 
     useEffect(()=>{
         API.getWeatherByCity(inputState.city).then(data => setCity(data))
@@ -22,6 +22,10 @@ export function SearchBar(props){
         })
     }
 
+    const onHandleClick = (e) => {
+        e.preventDefault();
+        props.onSearch(city)
+    }
     return (
         <>
             <form>
@@ -32,7 +36,7 @@ export function SearchBar(props){
                 />
                 <input 
                     type="submit"
-                    onClick={() => props.onSearch(city.main.temp_max)}
+                    onClick={(e) => onHandleClick(e)}
                 />
             </form>
         </>
