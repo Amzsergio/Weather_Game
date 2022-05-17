@@ -1,4 +1,5 @@
 import { SearchBar } from './components/SearchBar.jsx'
+import { Cards } from './components/Cards.jsx'
 
 
 
@@ -18,7 +19,11 @@ function App() {
   return (
     <div >
      <SearchBar
-     onSearch={(city) => onHandleSearch(city)}/>
+     onSearch={(city) => onHandleSearch(city)}
+     cities={cities}
+     />
+
+     <Cards/>
     </div>
   )
 }
