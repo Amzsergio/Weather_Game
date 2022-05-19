@@ -10,32 +10,33 @@ export function SearchBar(props){
     })
     
     const [city, setCity] = useState({})
-        
-    useEffect( async()=>{
-        
-            const cityResponse = await API.getWeatherByCity(inputState.city).then(data => setCity(data))
-
+    
+    useEffect(()=>{
+        if(inputState.search === true){
             props.onSearch(city)
-
-            
-        }, [inputState.city])
-        
-        
-        
-        const onHandleInputs = (e) => {
-            setInputState({
-                ...inputState,
-                [e.target.name]: e.target.value
-            })
         }
+    }, [city])
         
-        const onHandleClick = (e) => {
-            e.preventDefault();
-            console.log(inputState.search)
-            inputState.search = !inputState.search
-            console.log(inputState.search)
-            
+        
+        
+    const onHandleInputs = (e) => {
+        setInputState({
+            ...inputState,
+            [e.target.name]: e.target.value
+        })
     }
+    
+    const onHandleClick = (e) => {
+        e.preventDefault();
+        //  let promise = API.getWeatherByCity(inputState.city)
+        //  let data = await promise;
+        //  setCity(data)
+        console.log(inputState.search)
+        API.getWeatherByCity(inputState.city).then(data=>setCity(data))
+        inputState.search = true
+        console.log(inputState.search)
+    }
+    
 
     return (
         <>
