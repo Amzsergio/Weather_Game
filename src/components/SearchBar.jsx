@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import * as API from '../services/weather.js'
+import { connect } from "react-redux"
 
 
 export function SearchBar(props){
@@ -31,10 +32,8 @@ export function SearchBar(props){
         //  let promise = API.getWeatherByCity(inputState.city)
         //  let data = await promise;
         //  setCity(data)
-        console.log(inputState.search)
         API.getWeatherByCity(inputState.city).then(data=>setCity(data))
-        inputState.search = true
-        console.log(inputState.search)
+        inputState.search = true // this input is to avoid the useEffect to be executed the first time with the first render. 
     }
     
 
