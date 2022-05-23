@@ -1,27 +1,27 @@
-import { Card } from "./Card.jsx"
-import { useState, useEffect } from "react"
+// import { Card } from "./Card.jsx"
+// import { useState, useEffect } from "react"
 
-export function Cards(props){
+// export function Cards(props){
     
-    const [cities, setCities] = useState(props.cities);
+//     const [cities, setCities] = useState(props.cities);
 
     
-    // useEffect(()=>{
+//     // useEffect(()=>{
 
-    // }, [])
+//     // }, [])
 
-    return(
-        <>
-            <ul>
-                {
-                    props.cities.map(city => (
-                        <Card 
-                        key={city.id}
-                        name={city.name}
-                        />
-                    ))
-                }
-            </ul>
-        </>
-    )
-}
+//     return(
+//         <>
+//             <ul>
+//                 {
+//                     props.cities.map(city => (
+//                         <Card 
+//                         key={city.id}
+//                         name={city.name}
+//                         />
+//                     ))
+//                 }
+//             </ul>
+//         </>
+//     )
+// }

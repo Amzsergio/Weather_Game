@@ -10,7 +10,7 @@ const weatherReducer = (state = initialState, action) => {
         case GET_WEATHER_CARD:
             return{
                 ...state,
-                cities: action.payload
+                cities: [...state.cities, action.payload ]
             }
         case DELETE_WEATHER_CARD:
             return state

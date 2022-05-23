@@ -1,5 +1,5 @@
-import { SearchBar } from './components/SearchBar.jsx'
-import { Cards } from './components/Cards.jsx'
+import  SearchBar  from '../src/components/SearchBar.jsx'
+// import { Cards } from './components/Cards.jsx'
 
 
 
@@ -12,18 +12,14 @@ function App() {
     }else{
       alert('City not found')
     }
-    console.log(cities)
+    // console.log(cities)
   }
   
   return (
     <div >
-     <SearchBar
-     onSearch={(city) => onHandleSearch(city)}
-     cities={cities}
-     />
+     <SearchBar />
 
-     <Cards
-     cities={cities}/>
+     {/* <Cards /> */}
     </div>
   )
 }
