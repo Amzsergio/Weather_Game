@@ -1,27 +1,31 @@
 // import { Card } from "./Card.jsx"
-// import { useState, useEffect } from "react"
+import { connect } from "react-redux"
+import { Card } from "./Card"
 
-// export function Cards(props){
+function Cards(props){
     
-//     const [cities, setCities] = useState(props.cities);
+    return(
+        <>
+            <ul>
+                {
+                    props.state.cities.map((city)=>{
+                        return (
+                            <Card
+                            key={city.id}
+                            city={city}/>
+                        )
+                    })
+                }
+            </ul>
+        </>
+    )
+}
 
-    
-//     // useEffect(()=>{
+function mapStateToProps(state){
+    return{
+        state: state
+      }
+}
 
-//     // }, [])
 
-//     return(
-//         <>
-//             <ul>
-//                 {
-//                     props.cities.map(city => (
-//                         <Card 
-//                         key={city.id}
-//                         name={city.name}
-//                         />
-//                     ))
-//                 }
-//             </ul>
-//         </>
-//     )
-// }
+export default connect(mapStateToProps, null )(Cards)

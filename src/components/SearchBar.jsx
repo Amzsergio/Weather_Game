@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { connect } from "react-redux"
 import { getCardByCity } from '../redux/actions/actions.js'
 import React from "react"
@@ -10,8 +10,7 @@ function SearchBar(props){
         city:''
     })
     
-        
-        
+    
     const onHandleInputs = (e) => {
         setInputState({
             ...inputState,

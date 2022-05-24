@@ -2,15 +2,10 @@ import React from "react"
 
 export function Card(props){
 
+      
     return(
-        <React.Fragment>
-            <div>
-
-                <li>
-                    <h3> City: {props.name}</h3>
-                </li>
-
-            </div>
-        </React.Fragment>
+        <li>
+            {props.city.cod === 200 ? (props.city.name) : alert('City does not exist')}
+        </li>
     )
 }
