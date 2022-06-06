@@ -7,9 +7,9 @@ import store from '../src/redux/store/index.js'
 
 ReactDOM.render(
   <Provider store={store}>
-    <React.Fragment>
+    <>
         <App />
-    </React.Fragment>
+    </>
   </Provider>, 
   
   document.getElementById('root')
