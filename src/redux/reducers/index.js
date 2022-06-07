@@ -12,8 +12,10 @@ const weatherReducer = (state = initialState, action) => {
                 ...state,
                 cities: [...state.cities, action.payload ]
             }
+
         case DELETE_WEATHER_CARD:
             return state
+ 
         default:
             return state
     }

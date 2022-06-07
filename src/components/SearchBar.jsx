@@ -34,7 +34,7 @@ function SearchBar(props){
                 />
                 <input 
                     type="submit"
-                    onClick={() => props.getTheWeather(inputState.city)}
+                    onClick={() => props.getTheWeather(inputState.city, props.state.cities)}
                 />
             </form>
         </>
@@ -49,7 +49,7 @@ function mapStateToProps(state){
 
 function mapDispatchToProps(dispatch){
     return{
-        getTheWeather: (city) => dispatch(getCardByCity(city))
+        getTheWeather: (city, cities) => dispatch(getCardByCity(city, cities))
     }
 }
 

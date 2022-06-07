@@ -1,20 +1,19 @@
-// import { Card } from "./Card.jsx"
 import { connect } from "react-redux"
-import { Card } from "./Card"
+import { Card } from "../Card/Card.jsx"
+import style from "../Cards/Cards.module.css"
 
 function Cards(props){
-    
+
     return(
         <>
-            <ul>
+            <ul className={style.ul}>
                 {
-                    props.state.cities.map((city)=>{
-                        return (
+                    props.state.cities.map((city)=> (
                             <Card
                             key={city.id}
                             city={city}/>
                         )
-                    })
+                    )
                 }
             </ul>
         </>
