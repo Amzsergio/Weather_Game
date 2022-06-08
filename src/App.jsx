@@ -1,4 +1,4 @@
-import  SearchBar  from '../src/components/SearchBar.jsx'
+import SearchBar from './components/SearchBar/SearchBar.jsx'
 import Cards from '../src/components/Cards/Cards.jsx'
 
 

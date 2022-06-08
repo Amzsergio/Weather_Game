@@ -6,7 +6,7 @@ function Cards(props){
 
     return(
         <>
-            <ul className={style.ul}>
+            <div id={style.ul_container}>
                 {
                     props.state.cities.map((city)=> (
                             <Card
@@ -15,7 +15,8 @@ function Cards(props){
                         )
                     )
                 }
-            </ul>
+             
+            </div>
         </>
     )
 }

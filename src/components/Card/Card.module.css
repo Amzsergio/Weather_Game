@@ -1,4 +1,29 @@
 #card {
-    background-color: aqua;
-    
+    background: var(--color-bg-variant);
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 325px;
+}
+
+.card_title {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.card_info {
+    padding: 15px;
+}
+
+.info_container {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.icon_container {
+    text-align: center;
+}
+.icon_container img{
+    width: 90%;
 }

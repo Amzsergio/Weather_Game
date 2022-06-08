@@ -1,7 +1,8 @@
 import { useState } from "react"
 import { connect } from "react-redux"
-import { getCardByCity } from '../redux/actions/actions.js'
+import { getCardByCity } from '../../redux/actions/actions.js'
 import React from "react"
+import '../SearchBar/SearchBar.css'
 
 
 function SearchBar(props){
@@ -25,7 +26,7 @@ function SearchBar(props){
     
 
     return (
-        <>
+        <div className="form_container">
             <form onSubmit={(e) => onHandleSubmit(e)}>
                 <input 
                     type="text"
@@ -37,7 +38,7 @@ function SearchBar(props){
                     onClick={() => props.getTheWeather(inputState.city, props.state.cities)}
                 />
             </form>
-        </>
+        </div>
     )
 }
 

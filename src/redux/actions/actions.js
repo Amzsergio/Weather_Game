@@ -9,7 +9,7 @@ export function getCardByCity(city, cities){
             .then(res => res.json())
             .then(json =>{
                 if(json.cod === "404") alert("Ciudad no encontrada")
-                if(json.cod === 200 && cities.filter(city => city.id === json.id).length === 0){
+                else if(json.cod === 200 && cities.filter(city => city.id === json.id).length === 0){
                     return dispatch(
                         {
                             type: GET_WEATHER_CARD,
@@ -17,7 +17,7 @@ export function getCardByCity(city, cities){
                         }
                     )
                 }else {
-                    alert("No se puede repetir las ciudades")
+                    alert(`La ciudad ${json.name} ya se encuentra en pantalla`)
                 }
             })
     }
