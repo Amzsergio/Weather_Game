@@ -1,11 +1,18 @@
 #card {
-    background: var(--color-bg-variant);
+    background: var(--color-light);
     margin: 10px;
     padding: 10px;
-    border: 1px solid black;
+    border: 0.3rem solid var(--color-primary-variant);
     border-radius: 10px;
     width: 325px;
 }
+
+#card:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: 0.3rem solid var(--color-white);
+}
+
 
 .card_title {
     margin: 10px 0;
