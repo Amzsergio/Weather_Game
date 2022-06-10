@@ -1,4 +1,4 @@
-import { GET_WEATHER_CARD, DELETE_WEATHER_CARD } from "./actionTypes"
+import { GET_WEATHER_CARD, DELETE_WEATHER_CARD, DISPLAY_APP_INFO } from "./actionTypes"
 
 const API_URL = 'https://api.openweathermap.org/data/2.5/weather?'
 const API_KEY = '837b9ea4c3f73a0a22f635a9388e22e9'
@@ -27,5 +27,12 @@ export function deleteCardByCity(id){
     return{
         type: DELETE_WEATHER_CARD,
         payload: id
+    }
+}
+
+export function displayAppInfo(status){
+    return {
+        type: DISPLAY_APP_INFO,
+        payload: status
     }
 }
