@@ -5,6 +5,7 @@
     border: 0.3rem solid var(--color-primary-variant);
     border-radius: 10px;
     width: 325px;
+    transition: var(--transition);
 }
 
 #card:hover {
