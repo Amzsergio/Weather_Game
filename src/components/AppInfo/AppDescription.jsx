@@ -1,12 +1,17 @@
 import React from 'react'
 import s from '../AppInfo/AppInfo.module.css'
 
-export default function AppDescription() {
+export default function AppDescription({fireAppDescirption}) {
+
   return (
     <div>
-    on<article id={s.appInfo_container}>
+        <article className={s.appInfo_container}>
+            <button 
+            className={s.close_btn}
+            onClick={() => fireAppDescirption(false)}
+            >
+              x</button> 
             <p className={s.infoP}>
-                <button>x</button> 
                 <br />
                 Here I've used <a href="https://openweathermap.org/api" target='_blank'> this Api </a> to build a consultation web App, in which you can learn more about the weather of your favorite cities around the world. 
                 <br />

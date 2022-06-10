@@ -3,7 +3,7 @@ import { DELETE_WEATHER_CARD, GET_WEATHER_CARD, DISPLAY_APP_INFO } from '../acti
 
 const initialState = {
     cities: [],
-    appDescription: true
+    appDescription: false
 }
 
 const weatherReducer = (state = initialState, action) => {

@@ -2,21 +2,22 @@ import s from '../AppInfo/AppInfo.module.css'
 import AppDescription from './AppDescription'
 import { connect } from "react-redux"
 import { displayAppInfo } from '../../redux/actions/actions'
+import classNames  from 'classnames' // this is a JS utility for conditionally joining the classes for animating the AppDescription container. 
 
 function Appinfo(props){
-
-  console.log(props)
+ 
   return (
     <div>
       <div id={s.appTitle_container}>
         <h1> Worldwide Weather App </h1>
-        <h3 className={`${s.displayInfoBtn}`}>
+        <h3 className={s.displayInfoBtn}>
           <span
-            onMouseEnter={() => props.fireAppDescirption(true)}
-            onMouseLeave={() => props.fireAppDescirption(false)}
+            onClick={() => props.fireAppDescirption(!props.state.appDescription)}
           >More about this web app</span> </h3>
         { props.state.appDescription ? (
-          <AppDescription/>
+          <AppDescription
+          fireAppDescirption = {props.fireAppDescirption}
+          />
         ): null }
       </div >
         

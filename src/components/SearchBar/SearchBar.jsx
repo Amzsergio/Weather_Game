@@ -30,6 +30,7 @@ function SearchBar(props){
             <form onSubmit={(e) => onHandleSubmit(e)}>
                 <input 
                     type="text"
+                    placeholder="Write your city"
                     name='city'
                     onChange={(e) => onHandleInputs(e)}
                 />

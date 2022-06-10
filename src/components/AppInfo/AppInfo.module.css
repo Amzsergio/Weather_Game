@@ -30,22 +30,68 @@
     background-color: rgb(11, 0, 0)
 }
 
-#appInfo_container {
-    border: 1px solid var(--color-primary);
+.appInfo_container {
+    border: 0.3rem solid var(--color-primary-variant);
     border-radius: 0.8rem;
     margin: 2rem auto;
     background-color: var(--color-primary);
     color: var(--color-white);
     width: 600px;
     padding: 5px 20px 20px 20px;
+    position: relative;
+    transition: var(--transition);
 }
+
+.appInfo_container:hover {
+    background: var(--color-light);
+    border: 0.3rem solid var(--color-primary);
+    color: var(--color-primary);
+}
+
+.appInfo_container:hover a{
+    color: var(--color-primary);
+}
+
+
+.close_btn{
+    display: block;
+    position: absolute; 
+    top: 0.5rem;
+    right: 0.5rem;
+    cursor: pointer;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 1rem;
+    padding: 0 0 0.1rem 0;
+    border: none;
+    background-color: var(--color-primary-variant);
+    color: var(--color-white);
+    font-weight: bold;
+    transition: var(--transition);
+
+}
+
+.appInfo_container:hover .close_btn{
+    background-color: var(--color-primary);
+}
+.appInfo_container:hover .close_btn:hover {
+    background-color: transparent;
+    color: var(--color-primary);
+}
+
 
 .infoP a{
-    color: var(--color-light);
+    color: var(--color-white);
+    text-decoration: underline;
 }
 
-.infoP button {
-    background-color: red;
-    display: inline;
-    
-}
+
+.animate {
+    transition: transform var(--transition);
+  }
+  
+.animate.grow {
+    transform: scale(1.5);
+  }
+
+
