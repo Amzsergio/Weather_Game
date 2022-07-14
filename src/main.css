@@ -27,7 +27,7 @@ body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.5rem;
     background: var(--color-bg);
-    background-image: url(../src/assets/—Pngtree—cloud\ weather\ climate_8186757.png);
+    background-image: url(assets/texture.png);
 }
 
 /* == == General Stayles == == */
