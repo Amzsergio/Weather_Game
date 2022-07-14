@@ -10,10 +10,11 @@
 }
 
 :root {
-    --color-bg: #9877A6;
-    --color-bg-variant: #D99AC8;
-    --color-primary: #252759;
-    --color-primary-variant: rgba(217, 113, 151, 0.4);
+    --color-bg: rgba(57, 146, 168, 0.6);
+    /* rgba(57, 146, 168, 0.6 */
+    --color-bg-variant: #42a3b8; 
+    --color-primary: rgba(79, 166, 146, 0.5);
+    --color-primary-variant: rgba(223, 91, 71, 0.8);
     --color-white: #fff;
     --color-light: rgba(255, 255, 255, 0.6);
     --transition: all 700ms ease;
@@ -26,7 +27,7 @@ body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.5rem;
     background: var(--color-bg);
-    background-image: url(../src/assets/Testure.png);
+    background-image: url(../src/assets/—Pngtree—cloud\ weather\ climate_8186757.png);
 }
 
 /* == == General Stayles == == */

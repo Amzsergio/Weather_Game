@@ -1,9 +1,7 @@
-import AppDescription from '../../components/AppInfo/AppDescription.jsx'
-import { DELETE_WEATHER_CARD, GET_WEATHER_CARD, DISPLAY_APP_INFO } from '../actions/actionTypes.js'
+import { DELETE_WEATHER_CARD, GET_WEATHER_CARD} from '../actions/actionTypes.js'
 
 const initialState = {
-    cities: [],
-    appDescription: false
+    cities: []
 }
 
 const weatherReducer = (state = initialState, action) => {
@@ -18,11 +16,6 @@ const weatherReducer = (state = initialState, action) => {
         case DELETE_WEATHER_CARD:
             return state
         
-        case DISPLAY_APP_INFO:
-            return {
-                ...state,
-                appDescription: action.payload
-            }
         default:
             return state
     }

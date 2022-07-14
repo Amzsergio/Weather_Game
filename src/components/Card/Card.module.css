@@ -1,8 +1,9 @@
 #card {
-    background: var(--color-light);
+    background: var(--color-primary);
+    color: black;
     margin: 10px;
     padding: 10px;
-    border: 0.3rem solid var(--color-primary-variant);
+    border: 0.2rem solid var(--color-light);
     border-radius: 10px;
     width: 325px;
     transition: var(--transition);
@@ -10,8 +11,7 @@
 
 #card:hover {
     background-color: var(--color-primary);
-    color: var(--color-white);
-    border: 0.3rem solid var(--color-white);
+    border: 0.3rem solid transparent;
 }
 
 

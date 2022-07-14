@@ -1,41 +1,25 @@
 import s from '../AppInfo/AppInfo.module.css'
-import AppDescription from './AppDescription'
-import { connect } from "react-redux"
-import { displayAppInfo } from '../../redux/actions/actions'
-import classNames  from 'classnames' // this is a JS utility for conditionally joining the classes for animating the AppDescription container. 
 
-function Appinfo(props){
+export default function Appinfo(){
  
   return (
     <div>
       <div id={s.appTitle_container}>
-        <h1> Worldwide Weather App </h1>
-        <h3 className={s.displayInfoBtn}>
-          <span
-            onClick={() => props.fireAppDescirption(!props.state.appDescription)}
-          >More about this web app</span> </h3>
-        { props.state.appDescription ? (
-          <AppDescription
-          fireAppDescirption = {props.fireAppDescirption}
-          />
-        ): null }
-      </div >
+        <h1 id={s.siteTitle}> Worldwide <br/> Weather <br/> App </h1>
+
+        <article className={s.appInfo_container}>
+            <p className={s.infoP}>
+                <br />
+                Here I've used <a href="https://openweathermap.org/api" target='_blank'> This Api </a> to build a consultation web App, in which you can learn more about the weather of your favorite cities around the world. 
+                <br />
+                <b className={s.colorFul}>Comming soon:</b> A section where you'll be able to enjoy a game with the displayed cards, in order you to improve your holistic knowledge about the cities of your interest.   
+            </p>
+        </article>
+        
+    
+      </div>
         
     </div>
   )
 }
 
-function mapStateToProps(state){
-  return{
-      state: state
-    }
-}
-
-function mapDispatchToProps(dispatch){
-  return {
-    fireAppDescirption: (status) => dispatch(displayAppInfo(status))
-  }
-}
-
-
-export default connect(mapStateToProps, mapDispatchToProps )(Appinfo)
